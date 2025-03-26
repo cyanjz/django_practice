@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+l&nkit1-0t@irgmhlv3&)m0ajlb8n%9fh2*-94^r^07&-v@d7'
+SECRET_KEY = 'django-insecure-*2*9ky0t!9htqbvs$^)^ieyn7pizzh%fsc%@_dz93=w^3@(=sj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'book_main_page',
+    'pages',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +55,9 @@ ROOT_URLCONF = 'bookpjt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'base_templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
