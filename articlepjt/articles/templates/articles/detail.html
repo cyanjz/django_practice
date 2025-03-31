@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<ul>
+    <li>{{article.pk}}번째 게시글</li>
+    <li>제목 : {{article.title}}</li>
+    <li>내용 : {{article.content}}</li>
+    <li>작성 시각 : {{article.created_at}}</li>
+    <li>수정 시각 : {{article.updated_at}}</li>
+</ul>
+
+<form action="{% url "articles:update" article.pk %}" method="GET">
+    <input type="submit" value="수정">
+</form>
+
+{% endblock content %}
